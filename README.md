@@ -1,4 +1,4 @@
-# Forge "Hello, World!"
+# Forge Weather Tool
 
 This project contains a Forge app written in Javascript that displays The Weather in a Jira dashboard gadget using OpenWeather API. 
 
