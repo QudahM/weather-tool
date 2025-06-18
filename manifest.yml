@@ -1,0 +1,30 @@
+modules:
+  jira:dashboardGadget:
+    - key: weather-tool-dashboard-gadget-ui-kit-2-hello-world-gadget
+      title: weather-tool
+      description: A hello world dashboard gadget.
+      thumbnail: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
+      resource: main-resource
+      render: native
+      resolver:
+        function: resolver
+      edit:
+        resource: main-resource
+        render: native
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main-resource
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs22.x
+    memoryMB: 256
+    architecture: arm64
+  id: ari:cloud:ecosystem::app/a87f3613-4654-4187-b691-cbbc3fd5b652
+permissions:
+  external:
+    fetch:
+      backend:
+        - api.openweathermap.org
